@@ -29,7 +29,7 @@ class RegionsViewController: UITableViewController{
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let countriesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CountriesViewController") as! CountriesViewController
+        let countriesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CommonCountriesViewController") as! CountriesViewController
         countriesViewController.region=regions[indexPath.row]
         navigationController?.pushViewController(countriesViewController, animated: true)
     }

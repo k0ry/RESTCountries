@@ -17,7 +17,7 @@ class ViewController: UITabBarController {
         viewControllers = [
             createNavigationController(for: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RegionsViewController") as! RegionsViewController, title: "Explore", image: UIImage(systemName: "sun.min.fill")!, tag: 0),
             createNavigationController(for: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CountriesViewController") as! CountriesViewController, title: "Search", image: UIImage(systemName:"location.magnifyingglass")!, tag: 1),
-            createNavigationController(for: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CountriesViewController") as! CountriesViewController, title: "Favorites", image: UIImage(systemName: "star")!, tag: 2)
+            createNavigationController(for: UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CommonCountriesViewController") as! CountriesViewController, title: "Favorites", image: UIImage(systemName: "star")!, tag: 2)
         ]
     }
     

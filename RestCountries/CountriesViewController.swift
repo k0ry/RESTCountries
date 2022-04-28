@@ -10,7 +10,7 @@ import UIKit
 import SwiftUI
 
 class CountriesViewController: UIViewController, RegionProcessorDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBar: UISearchBar?
     @IBOutlet weak var localTableView: UITableView!
 
     var region: String?
@@ -34,16 +34,16 @@ class CountriesViewController: UIViewController, RegionProcessorDelegate, UISear
                 regionProcessor.fetchCountries(region)
                 self.navigationItem.title="Countries in \(curRegion)"
             }
-            searchBar.isHidden = true
         }
         else if (self.navigationController!.tabBarItem.tag == 1) {
-            searchBar.isHidden = false
+            if let searchBar = searchBar {
+                searchBar.isHidden = false
+            }
             self.navigationItem.title="Search"
         }
         else {
             regionProcessor.fetchFavourites()
             self.navigationItem.title="Favorites"
-            searchBar.isHidden = true
         }
         self.localTableView.reloadData()
     }
@@ -72,10 +72,10 @@ class CountriesViewController: UIViewController, RegionProcessorDelegate, UISear
             if (tag == 0){
                 retval = "Download failed"
             }
-            else if (tag == 1 && (searchBar.text?.count == 0 || searchBar.text == nil)){
+            else if (tag == 1 && (searchBar!.text?.count == 0 || searchBar!.text == nil)){
                 retval = "Enter search string"
             }
-            else if (tag == 1 && searchBar.text!.count > 0 ){
+            else if (tag == 1 && searchBar!.text!.count > 0 ){
                 retval = "Search string not found"
             }
             else if (tag == 2){
