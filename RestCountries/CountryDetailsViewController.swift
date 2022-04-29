@@ -121,6 +121,7 @@ class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITab
 
     }
     override func viewDidLoad() {
+        self.navigationItem.largeTitleDisplayMode = .never
         self.updateCountry()
     }
     
