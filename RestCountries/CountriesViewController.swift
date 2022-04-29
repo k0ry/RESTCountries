@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-class CountriesViewController: UIViewController, RegionProcessorDelegate, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource{
+class CountriesViewController: UITableViewController, RegionProcessorDelegate, UISearchBarDelegate{
     @IBOutlet weak var searchBar: UISearchBar?
     @IBOutlet weak var localTableView: UITableView!
 
@@ -117,7 +117,7 @@ class CountriesViewController: UIViewController, RegionProcessorDelegate, UISear
         }
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell : UITableViewCell
         if let list = currentList{
             if (list.count == 0){
@@ -164,7 +164,7 @@ class CountriesViewController: UIViewController, RegionProcessorDelegate, UISear
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let list = currentList{
             if (indexPath.row < list.count){
                 let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -175,11 +175,11 @@ class CountriesViewController: UIViewController, RegionProcessorDelegate, UISear
         }
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let list = currentList{
             if (list.count == 0){
                 return 1

@@ -33,7 +33,7 @@
             startingLineNumber = "176"
             endingLineNumber = "176"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -49,7 +49,7 @@
             startingLineNumber = "172"
             endingLineNumber = "172"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -65,7 +65,7 @@
             startingLineNumber = "168"
             endingLineNumber = "168"
             landmarkName = "numberOfSections(in:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -81,7 +81,7 @@
             startingLineNumber = "128"
             endingLineNumber = "128"
             landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,7 +97,7 @@
             startingLineNumber = "173"
             endingLineNumber = "173"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "9">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
